@@ -5,7 +5,8 @@ Function New-Password
 Creates a password using a pretty random method.  Good enough for most cases.
 
 .DESCRIPTION
-Creates a password using a pretty random method using the Windows CryptoAPI.  Good enough for most cases.
+Creates a password using a pretty random method using the Windows Cryptographic Service Provider (CSP).  
+This is 'good enough' for most cases as without a hardware generator probably as good as Windows provides.
 
 .PARAMETER Length
 Length of passwords generated.  Default is 16
@@ -27,7 +28,7 @@ New-Password -Length 20 -Count 20 -Readable
 -Outputs twenty passwords, 20 charecters wide using readable format and symbols
 
 .NOTES
-This uses the WIndows System.Security.Cryptography.RNGCryptoServiceProvider method which provides pretty good randomness.
+This uses the Windows System.Security.Cryptography.RNGCryptoServiceProvider method which provides pretty good randomness.
 #>
 Param
     (
@@ -55,7 +56,7 @@ Begin
         }
         else 
         {
-            [string]$charSet = $Alphas + $Numbers + $Symbols
+            [string]$charSet = $Alphas + $Symbols
         }
         $Passwords = @()
     }
