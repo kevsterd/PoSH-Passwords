@@ -43,12 +43,12 @@ Begin
         #Define strings uses for generation
         $Alphas = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         $Numbers = "1234567890"
-        $Symbols = $Numbers + "*!@#$.-+"
-        $MoreSymbols = $Symbols + "%^&=()_{}|[]\:;<>?,/~"
-                
+        $Symbols = "*!@#$.-+"
+        $ExtendedSymbols = $Symbols + "%^&=()_{}|[]\:;<>?,/~"
+
         if ($Strong -eq $true)
         {
-            [string]$charSet = $Alphas + $Numbers + $MoreSymbols
+            [string]$charSet = $Alphas + $Numbers + $ExtendedSymbols
         }
         elseif ($Readable -eq $true)
         {
@@ -56,7 +56,7 @@ Begin
         }
         else 
         {
-            [string]$charSet = $Alphas + $Symbols
+            [string]$charSet = $Alphas + $Numbers + $Symbols
         }
         $Passwords = @()
     }

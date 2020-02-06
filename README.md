@@ -2,11 +2,11 @@
 
 This a a simple function, that I will be adding to over time to generate passwords using PowerShell utilising the Windows Pseudo Random Number Generator (PRNG) which is a function from the Windows Cryptographic Service Provider (CSP).  This is (more than) 'good enough' for most cases as without a hardware generator probably as good as Windows provides.
 
-It was borne of frustration with a number of devices, platforms and applications not accepting specific charecters as input.  A number of platforms won't allow:
+It was borne of frustration with a number of devices, platforms and applications not accepting specific characters as input.  A number of platforms won't allow:
 
-* Specific Charecters only (% $ \  \/ for instance)
-* No numbers as the first charecter
-* No symbols as the first charecter
+* Specific Characters only (% $ \  \/ for instance)
+* No numbers as the first character
+* No symbols as the first character
 
 This is created as PowerShell function that is simple to use.
 
@@ -19,7 +19,7 @@ Then call the function
 
 It will output (by default) a:  
 
-* 16 charecter password
+* 16 character password
 * At least one Upper Case and one Lower Case
 * At least one number
 * At least one simple symbol eg. `*!@#$.-+`
@@ -38,8 +38,8 @@ If you need a different password length add `-length` followed by a number
 
 ### Need an easy to read password thats still complex ?
 
-Add the `-readable` flag.   This takes out some of the similar charecters such as `oO` and `iI`, leaving the numbers.
+Add the `-readable` flag.   This takes out some of the similar characters such as `oO` and `iI`, leaving the numbers.
 
 ### Need really strong passwords ?
 
-Add the `-strong` flag.  This uses the full alpha, numeric and standard symbol set including the icky charecters that some systems dont like.
+Add the `-strong` flag.  This uses the full alpha, numeric and standard symbol set including the icky characters that some systems don't like.
