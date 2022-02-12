@@ -36,7 +36,7 @@ If you need more than one add `-count` followed by a number
 
 If you need a different password length add `-length` followed by a number
 
-### Need an easy to read password thats still complex ?
+### Need an easy to read password that's still complex ?
 
 Add the `-readable` flag.   This takes out some of the similar characters such as `oO` and `iI`, leaving the numbers.
 
